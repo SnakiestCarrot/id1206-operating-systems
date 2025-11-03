@@ -9,7 +9,7 @@
 
 int value = 0;
 
-void thread_func(void *param);
+void *thread_func(void *param);
 
 int main(int argc, char *argv[]) {
     pid_t pid;
@@ -32,11 +32,7 @@ int main(int argc, char *argv[]) {
     }
 }
 
-void thread_func(void *param) {
+void *thread_func(void *param) {
     value++;
     pthread_exit(0);
 }
-
-
-
-
