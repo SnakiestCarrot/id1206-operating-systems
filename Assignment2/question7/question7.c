@@ -87,7 +87,6 @@ void compute_parallell_histogram() {
     int current_start = 0;
 
     struct timespec start, end;
-    clock_gettime(CLOCK_MONOTONIC, &start);
 
     //Divide work and create ThreadData
     for (int i = 0; i < NUM_THREADS; i++) {
@@ -101,6 +100,8 @@ void compute_parallell_histogram() {
 
         current_start = current_end;
     }
+
+    clock_gettime(CLOCK_MONOTONIC, &start);
 
     //Start threads
     for (int i = 0; i < NUM_THREADS; i++) {
