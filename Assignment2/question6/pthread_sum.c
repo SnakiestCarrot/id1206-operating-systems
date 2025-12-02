@@ -9,7 +9,7 @@
 
 int num_threads;
 int array_size = 1000000;
-void *thread_func(); /* the thread function */
+void *thread_func(void *); /* the thread function */
 float RNG();
 float *randomArray;
 double *local_sums;
