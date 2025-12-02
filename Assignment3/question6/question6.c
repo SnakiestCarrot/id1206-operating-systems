@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char* argv[]) {
     // check for correct number of arguments
@@ -24,6 +25,9 @@ int main(int argc, char* argv[]) {
         perror("Malloc failed");
         return 1;
     }
+
+    // initalize allocated memory, comment out below line to see difference
+    memset(ptr, 0, N * page_size);
 
     printf("Random memory location: %p\n", ptr);
 
