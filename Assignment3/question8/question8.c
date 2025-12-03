@@ -288,7 +288,6 @@ int main(int argc, char *argv[])
         curr = curr->next;
     }
 
-
     printf("Pages in active list: ");
     //Print out the list of pages in active list
     print_list(active_list);
@@ -296,6 +295,8 @@ int main(int argc, char *argv[])
     //Print out the list of pages in inactive list
     print_list(inactive_list);
     /*free up resources properly */
+    free_list_nodes(active_list);
+    free_list_nodes(inactive_list);
     free(active_list);
     free(inactive_list);
     return 0;
