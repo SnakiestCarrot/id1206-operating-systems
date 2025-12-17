@@ -143,7 +143,7 @@ int is_in_array(int *arr, int num, int len)
 int main(int argc, char *argv[])
 {
      if(argc != 3) {
-          printf("Need 2 args please");
+          printf("Need 2 args N and P\nUsage: ./question7 <N> <P>\n");
           return 1;
      }
      int total_bytes = atoi(argv[1]); //number of bytes
